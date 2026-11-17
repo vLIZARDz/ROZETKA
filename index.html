@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rozetka-інтернет магазин</title>
+  <meta name="description" content="Лавка — інтернет-магазин електроніки, побутової техніки та товарів для дому.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Промо-стрічка -->
+  <div class="promo-bar text-center">Безкоштовна доставка від 1 000 ₴ — тільки цього тижня</div>
+
+  <!-- Шапка -->
+  <header class="site-header">
+    <div class="container-xxl header-inner">
+      <button class="burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#burgerMenu"
+              aria-controls="burgerMenu" aria-label="Відкрити меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo" aria-label="Лавка — на головну">
+        <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#00a046"/>
+          <path d="M8 12h16l-2 9H10z" fill="#fff"/>
+          <path d="M12 12a4 4 0 0 1 8 0" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <span>Rozetka</span>
+      </a>
+
+      <button class="catalog-btn" type="button">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span>Каталог</span>
+      </button>
+
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Я шукаю..." aria-label="Пошук">
+        <button type="submit">Знайти</button>
+      </form>
+
+      <nav class="header-icons" aria-label="Дії">
+        <a href="#" aria-label="Списки">
+          <svg viewBox="0 0 24 24" width="26" height="26"><rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#" aria-label="Сповіщення">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="Порівняння">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 4v16M5 7h14M5 7l-3 8h6zM19 7l-3 8h6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="Кошик">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M3 4h3l2.5 11h10L21 7H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="10" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Бургер-меню: кілька пунктів простим текстом -->
+  <div class="offcanvas offcanvas-start burger-menu" tabindex="-1" id="burgerMenu" aria-labelledby="burgerMenuLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="burgerMenuLabel">Меню</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрити"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="burger-list">
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Доставка та оплата</a></li>
+        <li><a href="#">Гарантія</a></li>
+        <li><a href="#">Повернення товару</a></li>
+        <li><a href="#">Акції</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="container-xxl page">
+    <div class="row g-4">
+
+      <!-- Бічне меню (лише на великих екранах — через клас Bootstrap) -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <a href="#" class="side-card side-card--green">
+          <strong>Картка Лавки</strong>
+          <small>Персональні знижки та бонуси</small>
+        </a>
+        <a href="#" class="side-card side-card--yellow">
+          <strong>Підписка «Плюс»</strong>
+          <small>Безкоштовна доставка лише 50 ₴/міс.</small>
+        </a>
+        <ul class="side-menu">
+          <li><a href="#">Енергонезалежність</a></li>
+          <li><a href="#">Ноутбуки та комп’ютери</a></li>
+          <li><a href="#">Смартфони, ТВ і електроніка</a></li>
+          <li><a href="#">Товари для геймерів</a></li>
+          <li><a href="#">Побутова техніка</a></li>
+          <li><a href="#">Товари для дому</a></li>
+          <li><a href="#">Авто і мото</a></li>
+          <li><a href="#">Інструменти та обладнання</a></li>
+          <li><a href="#">Сантехніка та ремонт</a></li>
+          <li><a href="#">Дача, сад і город</a></li>
+          <li><a href="#">Спорт і захоплення</a></li>
+          <li><a href="#">Одяг, взуття та прикраси</a></li>
+          <li><a href="#">Краса та здоров’я</a></li>
+          <li><a href="#">Дитячі товари</a></li>
+          <li><a href="#">Зоотовари</a></li>
+          <li><a href="#">Офіс, школа, книги</a></li>
+        </ul>
+      </aside>
+
+      <section class="col-lg-9">
+
+        <!-- Bootstrap Carousel -->
+        <div id="mainCarousel" class="carousel slide hero" data-bs-ride="carousel" aria-label="Акційні банери">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <div class="slide slide--blue">
+                <h2>Ноутбуки тривалої роботи<br>із заряджанням USB</h2>
+                <div class="badge-circle"><small>частинами до</small><b>18</b><small>платежів</small></div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="slide slide--green">
+                <h2>Побутова техніка<br>зі знижками до 30%</h2>
+                <div class="badge-circle"><small>знижки до</small><b>30%</b><small>на техніку</small></div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="slide slide--purple">
+                <h2>Все для геймерів:<br>контролери, ігри, аксесуари</h2>
+                <div class="badge-circle"><small>безкоштовна</small><b>0 ₴</b><small>доставка</small></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Попередній</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Наступний</span>
+          </button>
+        </div>
+
+        <div class="all-deals"><a href="#">Всі акції →</a></div>
+
+        <!-- Товари -->
+        <h2 class="section-title">Рекомендації на основі ваших переглядів</h2>
+        <div class="products">
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/cabel.webp" alt="Подовжувач кабель"></div>
+            <h3>Кабель розгалужувач 2в1с триггером PD 12V</h3>
+            <div class="product__row">
+              <div class="price"><s>599 ₴</s><b class="price--sale">499 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+            <small class="ship">Безкоштовна доставка</small>
+          </article>
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/station.webp" alt="Зарядна станція"></div>
+            <h3>Портативна зарядна станція 600 Вт</h3>
+            <div class="product__row">
+              <div class="price"><b>11 848 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+            <small class="ship">Безкоштовна доставка</small>
+          </article>
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/gamepad.webp" alt="Геймпад"></div>
+            <h3>Бездротовий геймпад білий</h3>
+            <div class="product__row">
+              <div class="price"><b>2 499 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+          </article>
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/rele.webp" alt="Реле захисту напруги"></div>
+            <h3>Реле захисту напруги SafePlug</h3>
+            <div class="product__row">
+              <div class="price"><b>879 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+            <small class="ship">Безкоштовна доставка</small>
+          </article>
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/glas.webp" alt="Омивач скла"></div>
+            <h3>Омивач скла зимовий -25°C з ліанкою</h3>
+            <div class="product__row">
+              <div class="price"><s>293 ₴</s><b class="price--sale">270 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+            <small class="ship">Безкоштовна доставка</small>
+          </article>
+
+          <article class="product">
+            <button class="fav" aria-label="В обране">♡</button>
+            <div class="product__img"><img src="img/light.jpeg" alt="Ліхтар"></div>
+            <h3>Ліхтар, 400 лм, RGB</h3>
+            <div class="product__row">
+              <div class="price"><s>1 799 ₴</s><b class="price--sale">1 599 ₴</b></div>
+              <button class="cart" aria-label="В кошик">🛒</button>
+            </div>
+            <span class="bonus">+1% бонусних ₴</span>
+            <small class="ship">Безкоштовна доставка</small>
+          </article>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    <div class="container-xxl">
+      <div class="footer-grid">
+
+        <div class="footer-col footer-col--social">
+          <h3>Ми в соціальних мережах</h3>
+          <div class="socials" aria-label="Соціальні мережі">
+            <a href="#" aria-label="TikTok">♪</a>
+            <a href="#" aria-label="Telegram">✈</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="X">✕</a>
+            <a href="#" aria-label="Viber">☏</a>
+          </div>
+          <p class="qr-text">Скануйте QR-код та встановлюйте застосунок</p>
+          <div class="apps">
+            <div class="qr" aria-hidden="true"></div>
+            <div class="stores">
+              <a href="#" class="store">App Store</a>
+              <a href="#" class="store">Google Play</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Інформація про компанію</h3>
+          <ul>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Умови використання сайту</a></li>
+            <li><a href="#">Політика приватності</a></li>
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="#">Всі категорії</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Допомога</h3>
+          <ul>
+            <li><a href="#">Доставка та оплата</a></li>
+            <li><a href="#">Кредит</a></li>
+            <li><a href="#">Гарантія</a></li>
+            <li><a href="#">Повернення товару</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Сервіси</h3>
+          <ul>
+            <li><a href="#">Бонусний рахунок</a></li>
+            <li><a href="#">Картка Лавки</a></li>
+            <li><a href="#">Подарункові сертифікати</a></li>
+            <li><a href="#">Обмін</a></li>
+            <li><a href="#">Корпоративним клієнтам</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Партнерам</h3>
+          <ul>
+            <li><a href="#">Продавати в Лавці</a></li>
+            <li><a href="#">Реклама</a></li>
+            <li><a href="#">Співпраця з нами</a></li>
+            <li><a href="#">Франчайзинг</a></li>
+            <li><a href="#">Оренда приміщень</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="pay">
+          <span class="pay__mc"><i></i><i></i></span>
+          <span class="pay__visa">VISA<small>SECURE</small></span>
+        </div>
+        <p>© 2026 Навчальний інтернет-магазин «Лавка». Макет створено для навчальних цілей.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-btn" type="button">✦ Лавка AI</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
